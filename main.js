@@ -1,4 +1,4 @@
-import './style.css'
+import './dist/style.css'
 // // import javascriptLogo from './javascript.svg'
 // // import { setupCounter } from './counter.js'
 //  async function load({ fetch }) {
