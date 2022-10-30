@@ -2,11 +2,14 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-
+  position: relative;
   nav {
-    ul{
-      background-color: hsl(0, 0, 0);
-      height: 20vh;
+    position: absolute;
+    width: 100%;
+
+    ul {
+      background-color: hsl(0, 0, 0, 0);
+      height: 10vh;
       display: flex;
       flex: 1;
       flex-flow: row wrap;
@@ -14,17 +17,17 @@ body {
       align-items: center;
       z-index: 1000;
     }
-      
-
-
-}
+  }
 
   .sections {
+
     display: flex;
     width: 100%;
     height: 100%;
     scroll-snap-type: both mandatory;
     overflow: scroll;
+
+
 
     section {
       //avoiding containing all sections in 100vw
@@ -38,7 +41,7 @@ body {
       align-items: center;
       gap: 3rem;
       background-color: black;
-    //   scroll-margin-left: calc(100vw - 100px);
+      //   scroll-margin-left: calc(100vw - 100px);
 
       &:nth-of-type(1) {
         color: aqua;
