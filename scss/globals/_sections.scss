@@ -3,6 +3,22 @@ body {
   width: 100vw;
   margin: 0;
 
+  nav {
+    ul{
+      background-color: hsl(0, 0, 0);
+      height: 20vh;
+      display: flex;
+      flex: 1;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 1000;
+    }
+      
+
+
+}
+
   .sections {
     display: flex;
     width: 100%;
@@ -21,8 +37,8 @@ body {
       justify-content: center;
       align-items: center;
       gap: 3rem;
-    //   scroll-margin-left: calc(100vw - 100px);
       background-color: black;
+    //   scroll-margin-left: calc(100vw - 100px);
 
       &:nth-of-type(1) {
         color: aqua;
