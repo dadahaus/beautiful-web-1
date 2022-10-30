@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 img
+2_temperance
 
 # Editor directories and files
 .vscode/*
