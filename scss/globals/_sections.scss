@@ -1,11 +1,29 @@
 body {
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
   margin: 0;
   position: relative;
+  // scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* Hide vertical scrollbar */
+  /* Hide horizontal scrollbar */
+  // -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+
+
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+
+  // }
+
+  // scrollbar-width: none;
+
   nav {
     position: absolute;
     width: 100%;
+    z-index: 1000;
 
     ul {
       background-color: hsl(0, 0, 0, 0);
@@ -13,43 +31,42 @@ body {
       display: flex;
       flex: 1;
       flex-flow: row wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       z-index: 1000;
     }
   }
 
-  .sections {
-
+  .wrapper {
     display: flex;
-    width: 100%;
-    height: 100%;
-    scroll-snap-type: both mandatory;
-    overflow: scroll;
+    flex-flow: nowrap;
 
+    // height: 100vh;
 
 
     section {
       //avoiding containing all sections in 100vw
       flex: none;
       scroll-snap-align: start;
-      height: 100vh;
       width: 100vw;
+      height: 100vh;
       display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center;
       gap: 3rem;
-      background-color: black;
+      background-color: rgb(255, 128, 128);
       //   scroll-margin-left: calc(100vw - 100px);
 
       &:nth-of-type(1) {
         color: aqua;
-        background-color: gray;
+        background-color: rgb(228, 114, 114);
       }
+
       &:nth-of-type(2) {
         color: violet;
       }
+
       &:nth-of-type(3) {
         color: rebeccapurple;
       }

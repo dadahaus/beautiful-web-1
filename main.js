@@ -1,4 +1,34 @@
-import './dist/style.css'
+import './dist/style.css';
+
+console.log('hello')
+
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".panel");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length -1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".wrapper",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    
+    end: () => "+=" + document.querySelector(".wrapper")
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
 // // import javascriptLogo from './javascript.svg'
 // // import { setupCounter } from './counter.js'
 //  async function load({ fetch }) {
@@ -19,16 +49,16 @@ import './dist/style.css'
 //   .then((response) => response.json())
 //   .then((data) => console.log(data));
 
-async function fetchMoviesStatus() {
-  const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=39eb751741e0260d50b6de01d1eadcba&language=en-US&page=1');
-  if (!response.ok) {
-    const message = `An error has occured: ${response.status}`;
-    throw new Error(message);
-  }
-  const data = await response.json();
-  console.log(data);
-  return data
-}
-fetchMoviesStatus().catch(error => {
-  error.message; // 'An error has occurred: 404'
-});
+// async function fetchMoviesStatus() {
+//   const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=39eb751741e0260d50b6de01d1eadcba&language=en-US&page=1');
+//   if (!response.ok) {
+//     const message = `An error has occured: ${response.status}`;
+//     throw new Error(message);
+//   }
+//   const data = await response.json();
+//   console.log(data);
+//   return data
+// }
+// fetchMoviesStatus().catch(error => {
+//   error.message; // 'An error has occurred: 404'
+// });
